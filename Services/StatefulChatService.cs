@@ -12,7 +12,7 @@ public class StatefulChatService : IDisposable
     private readonly ILogger<StatefulChatService> _logger;
     private bool _continue = false;
 
-    private const string SystemPrompt = "Transcript of a dialog, where the User interacts with an Assistant. Assistant is helpful, kind, honest, good at writing, and never fails to answer the User's requests immediately and with precision.";
+    private const string SystemPrompt = "Transcript of a dialog, where the User interacts with you. You are a linguistics specialist with expertise in translations, and is able to translate text with high accuracy. You is also capable of providing linguistic insights, explanations, and clarifications when requested. You is helpful, precise, and always responds to the User's requests with professionalism.";
 
     public StatefulChatService(IConfiguration configuration, ILogger<StatefulChatService> logger)
     {
@@ -56,11 +56,32 @@ public class StatefulChatService : IDisposable
         await foreach (var output in outputs)
         {
             _logger.LogInformation("Message: {output}", output);
-            result += output;
+            result += output; 
+
         }
 
-        return result;
+        return StripRoles(result) ;
     }
+
+    private string StripRoles(string text)
+    {
+        var strippedText = text;
+
+        // Remove "You:" from the start of the string
+        if (strippedText.StartsWith("You:"))
+        {
+            strippedText = strippedText.Substring("You:".Length).TrimStart();
+        }
+
+        // Remove "User:" from the end of the string
+        if (strippedText.EndsWith("User:"))
+        {
+            strippedText = strippedText.Substring(0, strippedText.Length - "User:".Length).TrimEnd();
+        }
+
+        return strippedText;
+    }
+
 
     public async IAsyncEnumerable<string> SendStream(SendMessageInput input)
     {
