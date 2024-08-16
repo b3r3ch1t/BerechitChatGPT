@@ -4,15 +4,22 @@
 	<TargetFramework>net8.0</TargetFramework>
 	<Nullable>enable</Nullable>
 	<ImplicitUsings>enable</ImplicitUsings>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
 	  <PackageReference Include="LLamaSharp" Version="0.15.0" />
 	  <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.15.0" />
+	  <PackageReference Include="llama_cpp.runtime.any.runtime.native.llama.cpp" Version="1.56.1" />
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 
   <ItemGroup>
 	<None Update="llama-2-7b-chat.Q4_0.gguf">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="phi-2.Q4_K_M.gguf">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
   </ItemGroup>
