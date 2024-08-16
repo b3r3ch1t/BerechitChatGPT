@@ -12,4 +12,10 @@
 	  <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.15.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="llama-2-7b-chat.Q4_0.gguf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

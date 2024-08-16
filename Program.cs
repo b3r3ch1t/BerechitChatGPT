@@ -1,4 +1,5 @@
 using System.Security.Cryptography;
+using BerechitChatGPT.Services;
 using Polly;
 
 namespace BerechitChatGPT
@@ -23,6 +24,12 @@ namespace BerechitChatGPT
 
 			// Add services to the container
 			builder.Services.AddControllersWithViews();
+
+
+
+			builder.Services.AddSingleton<StatefulChatService>();
+			builder.Services.AddScoped<StatelessChatService>();
+
 
 			var app = builder.Build();
 
