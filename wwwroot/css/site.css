@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf');
+    font-display: swap;
+}
+
+html, body {
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+#scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    border-radius: var(--bs-border-radius);
+}
+
+.slider-container > .slider {
+    width: 100%;
+}
+
+.slider-container > label {
+    width: 50px;
+    text-align: center;
+}
+
+.form-floating > textarea.form-control {
+    height: 100px;
+}
+
+.navbar-image {
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.nav-item.theme {
+    margin-top: 2px;
+}
+
+/* Dark theme values */
+[data-bs-theme=dark] #scroll-container {
+    background-color: #202020;
+}
+
+[data-bs-theme=dark] html,
+[data-bs-theme=dark] body,
+[data-bs-theme=dark] #sidebar,
+[data-bs-theme=dark] header {
+    background-color: #191919;
+}
+
+.entry {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+    .entry .signature, .entry .entry-date {
+        color: #808080;
+        font-size: 0.9em;
+        font-style: italic;
+    }
+
+    .entry .content, .entry .signature {
+        padding-left: 5px;
+        margin-left: 50px;
+    }
+
+        .entry .entry-header .participant {
+            font-weight: bold;
+            font-size: 1.4em;
+            padding-bottom: 5px;
+        }
+
+        .entry .entry-header .participant .participant-icon {
+            display: inline-block;
+            width: 50px;
+            text-align: center
+        }
+
+        .entry .entry-header .participant .participant-name {
+            display: inline-block;
+        }
