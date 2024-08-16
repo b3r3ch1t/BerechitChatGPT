@@ -166,6 +166,11 @@ Let's connect on LinkedIn:
 
 [Anderson Meneses on LinkedIn](https://www.linkedin.com/in/anderson-meneses)
 
+## Medium
+[Article on Medium](https://medium.com/@anderson.meneses/asp-net-core-8-with-llms-a-practical-example-with-berechitchatgpt-d52189fc5df2)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
