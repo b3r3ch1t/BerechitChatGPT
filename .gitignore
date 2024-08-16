@@ -361,4 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.gguf
 /llama-2-7b-chat.Q4_0.gguf
