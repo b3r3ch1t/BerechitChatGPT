@@ -1,3 +1,9 @@
+
+![Berechit ChatGPT](./imgs/futuristic_image_800x600.png)
+
+
+
+
 # BerechitChatGPT
 
 Welcome to **BerechitChatGPT**, a .NET Core 8 project designed to demonstrate the functionality of **LLamaSharp** and its potential for integrating and customizing AI models locally. This project provides an interactive chat experience using Large Language Models (LLMs) similar to ChatGPT.
@@ -70,6 +76,8 @@ This project utilizes the following libraries:
    ```bash
    dotnet run
    ```
+
+   ![Berechit ChatGPT](./imgs/BerechitChatGPT.png)
 
 ## How It Works
 
